@@ -1,5 +1,122 @@
 var board = [];
 
+function checkRow(board, row) 
+{
+    let map = new Map();
+    
+    for (let i = 0; i < 9; i++) 
+    {
+        if (board[row][i] < '0' || board[row][i] > '9') 
+        {
+            return false;
+        }
+
+        if (board[row][i] === '0') 
+        {
+            continue;
+        }
+        else if (!map.has(board[row][i])) 
+        {
+            map.set(board[row][i], 1);
+        }
+        else 
+        {
+            return false;
+        }
+    }
+    
+    return true;
+}
+  
+
+function checkCol(board, col) 
+{
+    let map = new Map();
+    
+    for (let i = 0; i < 9; i++) 
+    {
+        if (board[i][col] < '0' || board[i][col] > '9') 
+        {
+            return false;
+        }
+
+        if (board[i][col] === '0') 
+        {
+            continue;
+        }
+        else if (!map.has(board[i][col])) 
+        {
+            map.set(board[i][col], 1);
+        }
+        else 
+        {
+            return false;
+        }
+    }
+    
+    return true;
+}
+  
+
+function checkBox(board, row, col) 
+{
+    let map = new Map();
+    
+    for (let i = row; i < row + 3; i++) 
+    {
+        for (let j = col; j < col + 3; j++) 
+        {
+            if (board[i][j] < '0' || board[i][j] > '9') 
+            {
+                return false;
+            }
+            if (board[i][j] === '0') 
+            {
+                continue;
+            }
+            else if (!map.has(board[i][j])) 
+            {
+                map.set(board[i][j], 1);
+            }
+            else 
+            {
+                return false;
+            }
+        }
+    }
+    
+    return true;
+}
+  
+function isValidSudoku(board) 
+{
+    // Check rows and columns
+    for (let i = 0; i < 9; i++) 
+    {
+        if (checkRow(board, i) === false || checkCol(board, i) === false) 
+        {
+            return false;
+        }
+    }
+    
+    // Check 3x3 sub-boxes
+    for (let i = 0; i < 9; i += 3) 
+    {
+        for (let j = 0; j < 9; j += 3) 
+        {
+            if (checkBox(board, i, j) === false) 
+            {
+                return false;
+            }
+        }
+    }
+    
+    return true;
+  }
+  
+
+
+
 function isValid(num, row, col, board) 
 {
     for (let i = 0; i < 9; i++) 
@@ -68,9 +185,10 @@ solve.addEventListener("click", function(){
                 board[i][j] = inputVal;
         }
     }
-    if (SolveSudoku(board))
+    if (isValidSudoku(board))
     {
-        console.log(board);
+        SolveSudoku(board);
+
         for (var i = 0; i < 9; i++)
         {
             for (var j = 0; j < 9; j++)
