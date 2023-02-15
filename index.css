@@ -175,7 +175,10 @@ a:visited{
 
 
 .foot{
-    /* width: 100vw; */
+    box-sizing: border-box;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
     text-align: center;
     background-color: #16796f;
     color: white;
@@ -192,5 +195,4 @@ a:visited{
 hr{
     width: 80%;
     color: white;
-    
 }
