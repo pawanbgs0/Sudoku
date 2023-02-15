@@ -161,3 +161,36 @@ input{
     text-decoration: none;
     cursor: pointer;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:visited{
+    color: #cadedf;
+}
+
+
+.foot{
+    /* width: 100vw; */
+    text-align: center;
+    background-color: #16796f;
+    color: white;
+    margin-top: auto;
+    padding: 20px;
+    min-height: 10vh;
+}
+
+.flinks li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+hr{
+    width: 80%;
+    color: white;
+    
+}
