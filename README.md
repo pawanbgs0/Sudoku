@@ -3,6 +3,7 @@
 
 A simple website to get the solution of Sudoku instantly.
 
-**Website:** [Click Here](https://bit.ly/SudoSolver)
+**Website:**
+*<a href="https://bit.ly/SudoSolver" target="_blank">Click Here</a>*
 
 *Made with Love*
