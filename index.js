@@ -199,6 +199,7 @@ solve.addEventListener("click", function(){
     }
     else
     {
+        errorMessage();
         for (var i = 0; i < 9; i++)
         {
             for (var j = 0; j < 9; j++)
@@ -221,3 +222,16 @@ reset.addEventListener("click", function(){
     }
     
 })
+
+
+function errorMessage() 
+{
+    var popup = document.getElementById("popup-message");
+    popup.style.display = "block";
+}
+
+function closeMessage() 
+{
+    var popup = document.getElementById("popup-message");
+    popup.style.display = "none";
+}
