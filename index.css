@@ -12,16 +12,19 @@ body {
     background-size: cover;
 }
 
+
 h1{
     font-size: 50px;
     text-align: center;
     text-shadow: 2px 2px 4px #005048;
 }
 
-.div1{
+.div1
+{
     display: table;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
 
 table {
@@ -74,46 +77,31 @@ input{
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-around; */
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    
   }
 
-.btm1{
-    font-family: 'Kalam', cursive;
-    font-weight:600;
-    font-size: 18px;
-    background: #16796f;
-    color: white;
-    border:transparent;
-    border-radius: 5px;
-    padding: 8px 25px;
-    transition: transform 0.5s;
-    margin-left: 5%;
-}
-
-.btm1:hover{
-    font-weight:600;
-    cursor:pointer;
-    background:transparent;
-    color: #16796f;
-    text-decoration:none;
-    transform: translateY(-8px);
-}
-
+.btm1,
 .btm2{
     font-family: 'Kalam', cursive;
     font-weight:600;
     font-size: 18px;
     background: #16796f;
     color: white;
-    border:transparent;
+    border:none;
     border-radius: 5px;
     padding: 8px 25px;
     transition: transform 0.5s;
-    margin-right: 5%;
 }
 
+.btm1{
+    margin-right: 250px;
+}
+.btm1:hover,
 .btm2:hover{
     font-weight:600;
     cursor:pointer;
@@ -182,7 +170,7 @@ a:visited{
     text-align: center;
     background-color: #16796f;
     color: white;
-    margin-top: auto;
+    margin-left: auto;
     padding: 20px;
     min-height: 10vh;
 }
@@ -195,4 +183,9 @@ a:visited{
 hr{
     width: 80%;
     color: white;
+}
+
+p,h3{
+    display: flex;
+    justify-content: space-around;
 }
