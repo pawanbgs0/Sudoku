@@ -205,7 +205,7 @@ hr{
 
 @media screen and (max-width: 600px){
     .div1{
-        border: 5px solid red;
+        /* border: 5px solid red; */
         min-height: 100vh;
     }
 
@@ -239,5 +239,5 @@ hr{
         font-size: 2.5vw;
     }
 
-
+    
 }
