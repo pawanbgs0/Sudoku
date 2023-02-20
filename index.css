@@ -170,6 +170,7 @@ input{
 }
 
 .foot a:visited{
+    text-decoration: none;
     color: white;
 }
 
@@ -239,5 +240,5 @@ hr{
         font-size: 2.5vw;
     }
 
-    
+
 }
